@@ -1,11 +1,12 @@
 
 import './App.css'
 import Home from "./pages/index.jsx";
-import Cameron from "./pages/cameron.jsx"
-import Matt from "./pages/matt.jsx"
-import Alina from "./pages/alina.jsx"
-import Edward from "./pages/edward.jsx"
-import Quetzal from "./pages/quetzal.jsx"
+import Cameron from "./pages/cameron.jsx";
+import Matt from "./pages/matt.jsx";
+import Alina from "./pages/alina.jsx";
+import Edward from "./pages/edward.jsx";
+import Quetzal from "./pages/quetzal.jsx";
+import Mayo from "./pages/mayo.jsx";
 import {
   BrowserRouter,
   Routes,
@@ -24,6 +25,7 @@ function App() {
         <Route path="/alina" element={<Alina />} />
         <Route path="/edward" element={<Edward />} />
         <Route path="/quetzal" element={<Quetzal />} />
+        <Route path="/mayo" element={<Mayo />} />
       </Routes>
     </BrowserRouter>
   )
