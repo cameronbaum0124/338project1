@@ -1,7 +1,9 @@
+import NavBar from "../components/navbar";
 
 function Home() {
     return (
         <div>
+            <NavBar />
             <h1>Welcome to the UNCA CS Tutorial Page</h1>
             <button onClick={() => window.location.href="/cameron"}>Cameron</button>
             <br></br>

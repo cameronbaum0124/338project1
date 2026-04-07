@@ -25,7 +25,7 @@ function App() {
         <Route path="/cameron" element={<Cameron />} />
         <Route path="/matt" element={<Matt />} />
         <Route path="/alina" element={<Alina />} />
-        <Route path="/edward" element={<Edward />} />
+        <Route path="/CSCI:333" element={<Edward />} />
         <Route path="/quetzal" element={<Quetzal />} />
         <Route path="/mayo" element={<Mayo />} />
       </Routes>
