@@ -6,6 +6,7 @@ import Matt from "./pages/matt.jsx"
 import Alina from "./pages/alina.jsx"
 import Edward from "./pages/edward.jsx"
 import Quetzal from "./pages/quetzal.jsx"
+import Mayo from "./pages/mayo.jsx"
 // import NavBar from "./components/navbar.jsx"
 import {
   BrowserRouter,
@@ -26,6 +27,7 @@ function App() {
         <Route path="/alina" element={<Alina />} />
         <Route path="/edward" element={<Edward />} />
         <Route path="/quetzal" element={<Quetzal />} />
+        <Route path="/mayo" element={<Mayo />} />
       </Routes>
     </BrowserRouter>
   )

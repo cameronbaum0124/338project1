@@ -12,6 +12,8 @@ function Home() {
             <button onClick={() => window.location.href="/edward"}>Edward</button>
             <br></br>
             <button onClick={() => window.location.href="/quetzal"}>Quetzal</button>
+            <br></br>
+            <button onClick={() => window.location.href="/mayo"}>Mayo</button>
         </div>
     );
 }
