@@ -1,12 +1,13 @@
 
 import './App.css'
 import Home from "./pages/index.jsx";
-import Cameron from "./pages/cameron.jsx";
-import Matt from "./pages/matt.jsx";
-import Alina from "./pages/alina.jsx";
-import Edward from "./pages/edward.jsx";
-import Quetzal from "./pages/quetzal.jsx";
-import Mayo from "./pages/mayo.jsx";
+import Cameron from "./pages/cameron.jsx"
+import Matt from "./pages/matt.jsx"
+import Alina from "./pages/alina.jsx"
+import Edward from "./pages/edward.jsx"
+import Quetzal from "./pages/quetzal.jsx"
+import Mayo from "./pages/mayo.jsx"
+// import NavBar from "./components/navbar.jsx"
 import {
   BrowserRouter,
   Routes,
@@ -17,6 +18,7 @@ function App() {
   
 
   return (
+    
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<Home />} />
