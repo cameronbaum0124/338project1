@@ -6,6 +6,7 @@ import Matt from "./pages/matt.jsx"
 import Alina from "./pages/alina.jsx"
 import Edward from "./pages/edward.jsx"
 import Quetzal from "./pages/quetzal.jsx"
+// import NavBar from "./components/navbar.jsx"
 import {
   BrowserRouter,
   Routes,
@@ -16,6 +17,7 @@ function App() {
   
 
   return (
+    
     <BrowserRouter>
       <Routes> 
         <Route path="/" element={<Home />} />
