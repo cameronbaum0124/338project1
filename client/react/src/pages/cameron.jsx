@@ -1,11 +1,14 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import { Card, CardContent, CardMedia, Typography, IconButton, Toolbar, AppBar, Box} from '@mui/material';
-import FolderIcon from '@mui/icons-material/Folder';
-import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+import React from 'react'
+import Button from '@mui/material/Button'
+import { Card, CardContent, CardMedia, Typography, IconButton, Toolbar, AppBar, Box} from '@mui/material'
+import FolderIcon from '@mui/icons-material/Folder'
+import FolderOpenIcon from '@mui/icons-material/FolderOpen'
 import { Accordion, AccordionActions, AccordionSummary, AccordionDetails } from '@mui/material'
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import VideoCard from "../components/VideoCard.jsx" // thank you Matt :)
+
+
 
 const theme = createTheme({
     palette: {
@@ -38,7 +41,7 @@ function AccordionMaker({textColor, backgroundCol, summaryText, detailsText, ali
             <AccordionDetails>
                 <Typography fontFamily="math">{detailsText}</Typography>
                 <Card>
-                    <CardMedia component="video" src="https://www.youtube.com/watch?v=SqcY0GlETPk"/>
+                    <VideoCard title="Linux Commands" description="Linux commands tutorial test description." videoId="gd7BXuUQ91w"/>
                 </Card>
             </AccordionDetails>
         </Accordion>
