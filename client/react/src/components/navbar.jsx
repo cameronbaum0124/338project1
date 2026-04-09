@@ -1,4 +1,4 @@
-/*import * as React from 'react';
+import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,14 +12,17 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ComputerIcon from '@mui/icons-material/Computer';
+import { useNavigate } from 'react-router-dom';
 
-const pages = ['CSCI:343', 'CSCI: 235', 'CSCI: 333', 'CSCI:183', 'CSCI:329'];
-const members = ["/matt", "/cameron", "/edward", "/quetzal", "/alina"];
+const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const navigate = useNavigate();
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,8 +39,13 @@ function NavBar() {
     setAnchorElUser(null);
   };
 
+  function goToPage(pageTitle) {
+    console.log("we should be going to page: " +pageTitle)
+    navigate('/' +pageTitle)
+  }
+
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{bgcolor: '#5e5e5e', borderRadius: 4}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ComputerIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -87,7 +95,7 @@ function NavBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={handleCloseUserMenu }>
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -116,10 +124,10 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => goToPage(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page === '/' ? "Home" : page}
               </Button>
             ))}
           </Box>
@@ -158,4 +166,4 @@ function NavBar() {
   );
 }
 export default NavBar;
-*/
+

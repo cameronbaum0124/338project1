@@ -1,20 +1,34 @@
+import Box from "@mui/material/Box"
+import React from "react"
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+
+const theme = createTheme({
+    palette: {
+        background: {
+            main: '#bab2b2'
+        }
+    }
+})
 
 function Home() {
     return (
-        <div>
-            <h1>Welcome to the UNCA CS Tutorial Page</h1>
-            <button onClick={() => window.location.href="/cameron"}>Cameron</button>
+        <ThemeProvider theme={theme} component="span">
             <br></br>
-            <button onClick={() => window.location.href="/matt"}>Matt</button>
-            <br></br>
-            <button onClick={() => window.location.href="/alina"}>Alina</button>
-            <br></br>
-            <button onClick={() => window.location.href="/edward"}>Edward</button>
-            <br></br>
-            <button onClick={() => window.location.href="/quetzal"}>Quetzal</button>
-            <br></br>
-            <button onClick={() => window.location.href="/mayo"}>Mayo</button>
-        </div>
+            <Box sx={{
+                position: "relative",
+                height: "50vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+                backgroundImage: "url('/unca_photo.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: 4
+                }}>
+            </Box>
+
+        </ThemeProvider>
     );
 }
 
