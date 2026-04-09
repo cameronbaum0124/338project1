@@ -14,8 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ComputerIcon from '@mui/icons-material/Computer';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['CSCI:343', 'CSCI: 235', 'CSCI:333', 'CSCI:183', 'CSCI:329'];
-const members = ["/matt", "/cameron", "/edward", "/quetzal", "/alina"];
+const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
@@ -46,7 +45,7 @@ function NavBar() {
   }
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{bgcolor: '#5e5e5e', borderRadius: 4}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <ComputerIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -128,7 +127,7 @@ function NavBar() {
                 onClick={() => goToPage(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page === '/' ? "Home" : page}
               </Button>
             ))}
           </Box>
