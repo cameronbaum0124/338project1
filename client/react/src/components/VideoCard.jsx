@@ -10,7 +10,7 @@ import{
 
 
 
-function VideoCard({ title, description, videoId }) {
+export default function VideoCard({ title, description, videoId }) {
     return(
        <Card
   sx={{
