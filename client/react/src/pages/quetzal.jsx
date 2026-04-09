@@ -56,7 +56,7 @@ function VideoCard({title, description, videoID}) {
 function Quetzal() {
     return (
         <ThemeProvider theme={theme} Comment="span">
-            <Box sx={{bgcolor: "primary.main"}}>
+            <Box sx={{bgcolor: "primary.main",justifycontent: 'center',}}>
                 <Typography sx={{color: "textColor.Mtitle"}}>
                     <h1 variant="h1" gutterBottom sx={{fontFamily: "print", fontSize: 50}}>
                         Welcome to Quetzal's Page
@@ -64,8 +64,8 @@ function Quetzal() {
                 </Typography>
                 <button onClick={() => window.location.href="/"}>Back to Home</button>
                 <Typography variant="body2" sx={{color: "textColor.main", fontFamily: "cursive"}}>
-                    "This page has tutorials for CSCI 183 – Introduction to Programming: Data Science"
-                    "In the class you will learn to prtogram in boath Pythom and R"
+                    This page has tutorials for CSCI 183 – Introduction to Programming: Data Science
+                    In the class you will learn to prtogram in boath Pythom and R
                 </Typography>
                 <Typography sx={{color: "textColor.sect"}}>
                     <h2 variant="h2" gutterBottom sx={{fontFamily: "print", fontSize: 50}}>
