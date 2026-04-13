@@ -1,11 +1,11 @@
 import React from 'react'
-import { Card, CardContent, Typography, Box} from '@mui/material'
+import { Card, CardContent, Typography, Box, CssBaseline} from '@mui/material'
 import FolderIcon from '@mui/icons-material/Folder'
 import FolderOpenIcon from '@mui/icons-material/FolderOpen'
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material'
 import Grid from '@mui/material/Grid'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import VideoCard from "../components/VideoCard.jsx" // thank you Matt :)
+import VideoCard from "../components/CameronVideoCard.jsx" // thank you Matt :)
 import ImagePlacer from "../components/CameronImagePlacer.jsx"
 
 const theme = createTheme({
@@ -19,6 +19,9 @@ const theme = createTheme({
         },
         textColor: {
             main: '#fff'
+        },
+        background: {
+            default: '#C1C8E4'
         }
     }
 });
@@ -58,7 +61,7 @@ function VideoSection({title, videos }) {
                 sx={{ 
                     mb: 2,
                     fontFamily: "math",
-                    opacity: 0.75, 
+                    opacity: 1, 
                     textShadow: "0 0 14px rgba(255,255,255,0.4)",
                 }}>
                 {title}
@@ -160,9 +163,9 @@ function Cameron() {
                     videoId: "tK9Oc6AEnR4",
                 },
                 {
-                    title: "Powershell Beginner Tutorial: JackedProgrammer",
-                    description: "A quick tutorial series on Powershell, the shell used on Windows OS.",
-                    videoId: "NECE5CX69tk&list=PLnK11SQMNnE4vcvuAahz4KhNOS7zOfmB3",
+                    title: "Powershell Beginner Tutorial: Jim Tyler",
+                    description: "A beginner tutorial course on Powershell, the shell used on Windows OS.",
+                    videoId: "ZOoCaWyifmI",
                 },
                 {
                     title: "What is Bash?: Fireship",
@@ -175,33 +178,32 @@ function Cameron() {
 
     return (  
         <ThemeProvider theme={theme} component="span">
+            <CssBaseline/>
             <br></br>
-            <Box sx={{bgcolor: "primary.grayishPurple", borderRadius: 4}}>
 
-                <Grid container justifyContent="flex-end">
-                    <Card elevation={15} sx={{borderRadius: 7, bgcolor: "primary.darkerBlue", color: "textColor.main", margin: 1}}>
-                        <CardContent sx={{padding: 3}}>
-                            <Typography variant="h2" component="div" fontFamily="math">
-                                Systems I
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+            <Grid container justifyContent="flex-end">
+                <Card elevation={15} sx={{borderRadius: 7, bgcolor: "primary.darkerBlue", color: "textColor.main", margin: 1}}>
+                    <CardContent sx={{padding: 3}}>
+                        <Typography variant="h2" component="div" fontFamily="math">
+                            Systems I
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Grid>
 
-                <br></br>
-                <br></br>
+            <br></br>
+            <br></br>
 
-                <Grid container sx={{display: 'flex', justifyContent: "center"}}>
-                    <AccordionMaker textColor="textColor.main" backgroundCol="primary.purple" summaryText="C Tutorials" tutorialType={cTutorials} alignment="flex-end"/>
-                    <AccordionMaker textColor="textColor.main" backgroundCol="primary.darkerBlue" summaryText="Linux Tutorials" tutorialType={linuxTutorials}/>
-                    <AccordionMaker textColor="textColor.main" backgroundCol="primary.lightBlue" summaryText="Assembly Tutorials" tutorialType={assemblyTutorials}/>
-                    <AccordionMaker textColor="textColor.main" backgroundCol="primary.main" summaryText="Shell Scripting Tutorials" tutorialType={shellScripting}/>
-                    <ImagePlacer />
-                </Grid>
+            <Grid container sx={{display: 'flex', justifyContent: "center"}}>
+                <AccordionMaker textColor="textColor.main" backgroundCol="primary.purple" summaryText="C Tutorials" tutorialType={cTutorials} alignment="flex-end"/>
+                <AccordionMaker textColor="textColor.main" backgroundCol="primary.darkerBlue" summaryText="Linux Tutorials" tutorialType={linuxTutorials}/>
+                <AccordionMaker textColor="textColor.main" backgroundCol="primary.lightBlue" summaryText="Assembly Tutorials" tutorialType={assemblyTutorials}/>
+                <AccordionMaker textColor="textColor.main" backgroundCol="primary.main" summaryText="Shell Scripting Tutorials" tutorialType={shellScripting}/>
+                <ImagePlacer />
+            </Grid>
 
-                <br></br>
+            <br></br>
 
-            </Box>
         </ThemeProvider>
     );
 }
