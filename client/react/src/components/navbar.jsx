@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import ComputerIcon from '@mui/icons-material/Computer';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329'];
+const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329', 'CSCI:364'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function NavBar() {
