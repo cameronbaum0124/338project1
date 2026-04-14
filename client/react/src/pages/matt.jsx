@@ -21,6 +21,9 @@ function VideoCard({ title, description, videoId }) {
     color: "white",
     borderRadius: 3,
     transition: "0.3s",
+    height: 300,
+    display: "flex",
+    flexDirection: "column",
     "&:hover": {
       transform: "scale(1.05)",
       boxShadow: 6,
@@ -29,7 +32,7 @@ function VideoCard({ title, description, videoId }) {
 >
   <CardMedia
     component="iframe"
-    sx={{ aspectRatio: "16/9" }}
+    sx={{ aspectRatio: "16/9", height: 180 }}
     src={`https://www.youtube.com/embed/${videoId}`}
     title={title}
     allow="accelerometer;clipboard-write; encrypted-media;picture-in-picture; web-share"
@@ -64,8 +67,8 @@ function VideoSection({title, videos }) {
                 sx={{ 
                     mb: 2,
                     fontFamily: "Cursive",
-                    opacity: 0.75, 
-                    textShadow: "0 0 14px rgba(255,255,255,0.4)",
+                    opacity: 0.85, 
+                    textShadow: "0 0 8px rgba(255,255,255,0.4)",
                 }}>
                 {title}
             </Typography>
@@ -199,12 +202,15 @@ function Matt() {
     return(
      <Box sx= {{ 
         minHeight:"100vh", 
+        width: "100%",
+        m: 0,
+        p: 0,
+        overflowX: "hidden",
         backgroundImage: "url('/matt_page_card_background.jpg')"
 ,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
         backgroundColor: "#0d0d0d",
         }}>
         <Typography 
@@ -215,8 +221,8 @@ function Matt() {
                 mb: 2,
                 color: "#ffffff",
                 fontFamily: "cursive",
-                opacity: 0.75,
-                textShadow: "0 0 1 14px rgba(255,255,255,0.4)",
+                opacity: 0.85,
+                textShadow: "0 0 8px rgba(255,255,255,0.4)",
 
             }}>
                 Database Management CSCI:343 
@@ -244,23 +250,4 @@ export default Matt;
 
 
 
-   /* return (
-
-
-
-
-
-
-
-
-
-
-
-
-        <div>
-           
-            <Button variant = "contaiined" onClick={() => window.location.href="/"}>Back to Home</Button>
-        </div>
-    );
-}*/
-
+ 
