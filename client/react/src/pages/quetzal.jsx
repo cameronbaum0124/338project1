@@ -63,7 +63,6 @@ function Quetzal() {
                         Welcome to Quetzal's Page
                     </h1>
                 </Typography>
-                <button onClick={() => window.location.href="/"}>Back to Home</button>
                 <Typography variant="body2" sx={{color: "textColor.main", fontFamily: "cursive"}}>
                     This page has tutorials for CSCI 183 – Introduction to Programming: Data Science
                     In the class you will learn to prtogram in boath Pythom and R
