@@ -28,7 +28,7 @@ function App() {
         <Route path="/CSCI:329" element={<Alina />} />
         <Route path="/CSCI:333" element={<Edward />} />
         <Route path="/CSCI:183" element={<Quetzal />} />
-        <Route path="/mayo" element={<Mayo />} />
+        <Route path="/CSCI:364" element={<Mayo />} />
       </Routes>
     </BrowserRouter>
   )

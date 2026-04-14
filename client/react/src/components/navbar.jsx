@@ -10,21 +10,13 @@ import MenuItem from '@mui/material/MenuItem';
 import ComputerIcon from '@mui/icons-material/Computer';
 import { useNavigate } from 'react-router-dom';
 
-const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329'];
+const pages = ['/', 'CSCI:343', 'CSCI:235', 'CSCI:333', 'CSCI:183', 'CSCI:329', 'CSCI:364'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const navigate = useNavigate();
-
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
